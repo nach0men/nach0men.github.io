@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para mi Amor</title>
+    <title>Dia de las flores amarillas</title>
     <style>
         * {
             margin: 0;
@@ -59,12 +59,7 @@
             width: 100px;
             height: 150px;
             position: relative;
-            cursor: pointer;
             transition: transform 0.3s;
-        }
-        
-        .flower:hover {
-            transform: scale(1.2);
         }
         
         .flower-center {
@@ -213,7 +208,6 @@
             h1 { font-size: 2rem; }
             .subtitle { font-size: 1.2rem; }
             .flower { transform: scale(0.8); }
-            .flower:hover { transform: scale(0.9); }
         }
     </style>
 </head>
@@ -222,8 +216,8 @@
     
     <div class="container">
         <header>
-            <h1>Para mi Amor</h1>
-            <p class="subtitle">Cada flor amarilla es un pensamiento bonito que tengo de ti</p>
+            <h1>Dia de las flores amarillas</h1>
+            <p class="subtitle">Espero que te gusten estas flores que te hice con mucho cariño</p>
         </header>
         
         <div class="flower-garden">
@@ -231,19 +225,18 @@
         </div>
         
         <div class="message-container" id="messageContainer">
-            <p class="message">Querida mi vida,</p>
-            <p class="message">Las flores amarillas siempre me recuerdan a ti: brillantes, llenas de luz y capaces de iluminar hasta el día más gris. Por eso he creado este jardín especial solo para ti.</p>
-            <p class="message">Cada una de estas flores representa una razón por la que te amo, un momento feliz que hemos compartido o un deseo que tengo para nuestro futuro.</p>
-            <p class="message">Te amo más de lo que las palabras pueden expresar.</p>
-            <p class="signature">Para siempre tuyo</p>
+            <p class="message">Hola,</p>
+            <p class="message">No pude regalarte flores amarillas en persona, pero quise hacer este pequeño detalle en la página para darte al menos una versión distinta de ellas.</p>
+            <p class="message">Sé que no estamos en nuestro mejor momento y hemos tenido peleas, pero igual quería que tuvieras esto como un gesto sincero de mi parte.</p>
+            <p class="message">Ojalá te guste.</p>
+            <p class="signature">Con cariño</p>
         </div>
         
         <button id="surpriseBtn">¡Haz clic para una sorpresa especial!</button>
         
         <div class="hidden-message" id="hiddenMessage">
-            Eres la persona más maravillosa que he conocido y cada día a tu lado es un regalo. 
-            ¡Estoy ansioso por crear muchos más recuerdos contigo! 
-            ¿Sales conmigo esta noche? Tengo una sorpresa preparada 💛
+                Aunque hemos tenido nuestros momentos difíciles, para mí sigues siendo alguien muy importante.  
+                Este detalle es solo para recordártelo 💛
         </div>
         
         <footer>
@@ -279,60 +272,12 @@
             
             // Añadir flor al jardín
             flowerGarden.appendChild(flower);
-            
-            // Añadir evento para mostrar mensaje al hacer clic
-            flower.addEventListener('click', () => {
-                showMessage();
-            });
         }
         
         // Mostrar mensaje con retraso
         setTimeout(() => {
             document.getElementById('messageContainer').classList.add('show');
         }, 2000);
-        
-        // Función para mostrar mensaje al hacer clic en una flor
-        function showMessage() {
-            const messages = [
-                "Eres la luz de mi vida 💛",
-                "Tu sonrisa ilumina mis días",
-                "Eres más hermosa que cualquier flor",
-                "Cada momento contigo es especial",
-                "Te amo más de lo que las palabras pueden decir",
-                "Eres mi sueño hecho realidad",
-                "Eres tan radiante como el sol",
-                "Mi amor por ti crece cada día más",
-                "Eres la razón de mi felicidad",
-                "Nunca dejes de brillar"
-            ];
-            
-            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-            
-            // Crear notificación temporal
-            const notification = document.createElement('div');
-            notification.textContent = randomMessage;
-            notification.style.position = 'fixed';
-            notification.style.bottom = '20px';
-            notification.style.left = '50%';
-            notification.style.transform = 'translateX(-50%)';
-            notification.style.backgroundColor = '#fdd835';
-            notification.style.color = '#5d4037';
-            notification.style.padding = '10px 20px';
-            notification.style.borderRadius = '50px';
-            notification.style.zIndex = '1000';
-            notification.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
-            notification.style.animation = 'fadeIn 0.5s forwards';
-            
-            document.body.appendChild(notification);
-            
-            // Eliminar notificación después de 3 segundos
-            setTimeout(() => {
-                notification.style.animation = 'fadeIn 0.5s reverse forwards';
-                setTimeout(() => {
-                    document.body.removeChild(notification);
-                }, 500);
-            }, 3000);
-        }
         
         // Botón de sorpresa
         document.getElementById('surpriseBtn').addEventListener('click', function() {
