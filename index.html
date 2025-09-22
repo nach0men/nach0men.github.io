@@ -47,41 +47,6 @@
             animation: fadeIn 2s forwards 0.5s;
         }
         
-        .photo-container {
-            margin: 30px auto;
-            max-width: 400px;
-            position: relative;
-        }
-        
-        .couple-photo {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            border: 5px solid #fff;
-            transform: rotate(-2deg);
-            transition: transform 0.5s, box-shadow 0.5s;
-        }
-        
-        .couple-photo:hover {
-            transform: rotate(0deg) scale(1.02);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-        }
-        
-        .photo-frame {
-            position: relative;
-            padding: 15px;
-            background: linear-gradient(45deg, #ffeb3b, #fdd835);
-            border-radius: 25px;
-            display: inline-block;
-        }
-        
-        .photo-caption {
-            margin-top: 15px;
-            font-style: italic;
-            color: #5d4037;
-            font-size: 1.2rem;
-        }
-        
         .flower-garden {
             display: flex;
             flex-wrap: wrap;
@@ -249,7 +214,6 @@
             .subtitle { font-size: 1.2rem; }
             .flower { transform: scale(0.8); }
             .flower:hover { transform: scale(0.9); }
-            .photo-container { max-width: 300px; }
         }
     </style>
 </head>
@@ -261,15 +225,6 @@
             <h1>Para mi Amor</h1>
             <p class="subtitle">Cada flor amarilla es un pensamiento bonito que tengo de ti</p>
         </header>
-        
-        <!-- Contenedor de la foto de pareja -->
-        <div class="photo-container">
-            <div class="photo-frame">
-                <img src="https://i.ibb.co/3pLf6q0/IMG-20250212-200136-862.jpg" 
-                     alt="Nuestra foto juntos" class="couple-photo" id="couplePhoto">
-            </div>
-            <p class="photo-caption">Nuestra felicidad 💛</p>
-        </div>
         
         <div class="flower-garden">
             <!-- Flores generadas con JavaScript -->
@@ -348,11 +303,7 @@
                 "Eres tan radiante como el sol",
                 "Mi amor por ti crece cada día más",
                 "Eres la razón de mi felicidad",
-                "Nuestro amor es mi mayor tesoro",
-                "Eres mi persona favorita",
-                "Nunca dejes de brillar",
-                "Me haces incredibly feliz",
-                "Eres mi todo"
+                "Nunca dejes de brillar"
             ];
             
             const randomMessage = messages[Math.floor(Math.random() * messages.length)];
@@ -428,11 +379,6 @@
         
         // Crear algunos corazones al cargar la página
         window.addEventListener('load', createHearts);
-        
-        // Cambiar la foto de ejemplo por tu foto real
-        document.getElementById('couplePhoto').addEventListener('click', function() {
-            alert("💛 Esta es nuestra foto favorita 💛");
-        });
     </script>
 </body>
 </html>
